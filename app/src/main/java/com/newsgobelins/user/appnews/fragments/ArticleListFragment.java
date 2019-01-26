@@ -2,6 +2,7 @@ package com.newsgobelins.user.appnews.fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,6 +22,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 public class ArticleListFragment extends Fragment implements ArticleListener {
     private RecyclerView recyclerView;
@@ -34,12 +36,19 @@ public class ArticleListFragment extends Fragment implements ArticleListener {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.article_list_fragment, container, false);
         recyclerView = view.findViewById(R.id.list_article);
         RecyclerView.LayoutManager manager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(manager);
 
+        //Swipe
+        SwipeRefreshLayout swipeContainer = view.findViewById(R.id.swipe_container);
+
+        // Changer les couleurs du refresh
+        swipeContainer.setColorSchemeResources(android.R.color.holo_blue_bright,
+                android.R.color.holo_blue_light,
+                android.R.color.holo_blue_dark);
         return view;
     }
 
@@ -57,7 +66,7 @@ public class ArticleListFragment extends Fragment implements ArticleListener {
 
     @Override
     public void onShare(Article article) {
-        Toast.makeText(getContext(), "SHARRREEE", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getContext(), "PARTAGER", Toast.LENGTH_SHORT).show();
         Intent sendIntent = new Intent();
         sendIntent.setAction(Intent.ACTION_SEND);
         sendIntent.putExtra(Intent.EXTRA_TEXT, "Cet article " + article.getTitle() + " est trop bien");
@@ -89,5 +98,3 @@ public class ArticleListFragment extends Fragment implements ArticleListener {
     }
 
 }
-
-//Pull to refresh

@@ -62,7 +62,6 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.MyViewHo
             mImage = v.findViewById(R.id.image);
             mbuttonShare = v.findViewById(R.id.buttonShare);
             buttonLike = v.findViewById(R.id.buttonLike);
-
         }
 
         private void bindItem(final Article article) {
