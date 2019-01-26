@@ -1,10 +1,8 @@
 package com.newsgobelins.user.appnews.adapter;
 
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -18,6 +16,7 @@ import java.util.List;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+/** Classe ArticleAdapter qui permet de gérer nos données, est un intermediaire entre les données et notre vue **/
 public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.MyViewHolder> {
 
     List<Article> articles;
@@ -66,7 +65,7 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.MyViewHo
 
         }
 
-        public void bindItem(final Article article) {
+        private void bindItem(final Article article) {
             view.setOnClickListener(new View.OnClickListener(){
                 @Override
                 public void onClick(View v) {

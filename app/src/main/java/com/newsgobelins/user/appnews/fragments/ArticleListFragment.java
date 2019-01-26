@@ -46,7 +46,7 @@ public class ArticleListFragment extends Fragment implements ShareListener {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        model.getArticles().observe(this, new Observer<List<Article>>() {
+        model.getArticles().observe(getViewLifecycleOwner(), new Observer<List<Article>>() {
             @Override
             public void onChanged(List<Article> articles) {
                 ArticleAdapter adapter = new ArticleAdapter(articles, ArticleListFragment.this);

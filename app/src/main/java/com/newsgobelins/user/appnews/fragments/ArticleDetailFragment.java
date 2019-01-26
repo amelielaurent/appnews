@@ -21,7 +21,7 @@ public class ArticleDetailFragment extends Fragment {
     private View view;
     private TextView title;
     private TextView description;
-    ImageView image;
+    private ImageView image;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -41,7 +41,7 @@ public class ArticleDetailFragment extends Fragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        viewModel.getSelected().observe(this, new Observer<Article>() {
+        viewModel.getSelected().observe(getViewLifecycleOwner(), new Observer<Article>() {
             @Override
             public void onChanged(Article article) {
                 title.setText(article.getTitle());
