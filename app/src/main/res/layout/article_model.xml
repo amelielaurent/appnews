@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="4dp"
+    android:layout_margin="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
+        >
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher"
+            android:adjustViewBounds="true"/>
+
+        <TextView
+            android:id="@+id/textTitre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Titre"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:layout_marginTop="10sp"
+            app:layout_constraintTop_toBottomOf="@id/image"
+            android:paddingEnd="20sp"
+            android:paddingStart="20sp"/>
+
+        <TextView
+            android:id="@+id/textDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="lorem ipsum"
+            app:layout_constraintTop_toBottomOf="@id/textTitre"
+            android:layout_marginTop="10sp"
+            android:paddingEnd="20sp"
+            android:paddingStart="20sp"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/buttonLike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_favorite_border"
+            app:layout_constraintTop_toBottomOf="@id/textDescription"
+            app:layout_constraintEnd_toStartOf="@id/buttonShare"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_margin="10dp"
+            android:padding="10sp"
+            style="@style/ButtonPrimary"
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/buttonShare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_share"
+            app:layout_constraintTop_toBottomOf="@id/textDescription"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_margin="10dp"
+            android:padding="10sp"
+            style="@style/ButtonPrimary"
+            />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
