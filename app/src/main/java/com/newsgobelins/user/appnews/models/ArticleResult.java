@@ -3,9 +3,9 @@ package com.newsgobelins.user.appnews.models;
 import java.util.List;
 
 public class ArticleResult {
-    String status;
-    int totalResults;
-    List<Article> articles;
+    private String status;
+    private int totalResults;
+    private List<Article> articles;
 
     public String getStatus() {
         return status;

@@ -1,7 +1,5 @@
 package com.newsgobelins.user.appnews.viewmodel;
 
-import android.widget.Toast;
-
 import com.newsgobelins.user.appnews.database.DatabaseHelper;
 import com.newsgobelins.user.appnews.models.Article;
 import com.newsgobelins.user.appnews.models.ArticleResult;

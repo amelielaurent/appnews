@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 import com.newsgobelins.user.appnews.R;
 import com.newsgobelins.user.appnews.adapter.ArticleAdapter;
-import com.newsgobelins.user.appnews.listener.ShareListener;
+import com.newsgobelins.user.appnews.listener.ArticleListener;
 import com.newsgobelins.user.appnews.models.Article;
 import com.newsgobelins.user.appnews.viewmodel.ArticleViewModel;
 
@@ -22,7 +22,7 @@ import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class ArticleListFragment extends Fragment implements ShareListener {
+public class ArticleListFragment extends Fragment implements ArticleListener {
     private RecyclerView recyclerView;
     private ArticleViewModel model;
 

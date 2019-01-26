@@ -45,6 +45,7 @@ public class Article {
         this.urlToImage = urlToImage;
     }
 
+    @NonNull
     public String getUrl() {
         return url;
     }

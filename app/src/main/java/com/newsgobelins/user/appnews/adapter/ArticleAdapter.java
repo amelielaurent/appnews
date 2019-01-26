@@ -7,7 +7,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.newsgobelins.user.appnews.R;
-import com.newsgobelins.user.appnews.listener.ShareListener;
+import com.newsgobelins.user.appnews.listener.ArticleListener;
 import com.newsgobelins.user.appnews.models.Article;
 import com.squareup.picasso.Picasso;
 
@@ -20,9 +20,9 @@ import androidx.recyclerview.widget.RecyclerView;
 public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.MyViewHolder> {
 
     List<Article> articles;
-    private ShareListener listener;
+    private ArticleListener listener;
 
-    public ArticleAdapter(List<Article> articles, ShareListener listener) {
+    public ArticleAdapter(List<Article> articles, ArticleListener listener) {
         this.articles = articles;
         this.listener = listener;
     }
