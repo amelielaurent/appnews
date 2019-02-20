@@ -22,6 +22,9 @@ public class Article {
     @ColumnInfo(name = "article_description")
     private String description;
 
+    @ColumnInfo(name = "article_content")
+    private String content;
+
     @ColumnInfo(name = "article_like")
     private int like;
 
@@ -78,6 +81,13 @@ public class Article {
         this.description = description;
     }
 
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
 
     @Override
     public String toString() {
@@ -85,6 +95,7 @@ public class Article {
                 "urlToImage='" + urlToImage + '\'' +
                 ", title='" + title + '\'' +
                 ", description='" + description + '\'' +
+                ", content='" + content + '\'' +
                 '}';
     }
 }

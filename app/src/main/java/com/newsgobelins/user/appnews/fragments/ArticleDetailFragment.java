@@ -20,7 +20,7 @@ public class ArticleDetailFragment extends Fragment {
     private ArticleViewModel viewModel;
     private View view;
     private TextView title;
-    private TextView description;
+    private TextView content;
     private ImageView image;
 
     @Override
@@ -33,7 +33,7 @@ public class ArticleDetailFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.article_detail_fragment, container, false);
         title = view.findViewById(R.id.detail_title);
-        description = view.findViewById(R.id.detail_description);
+        content = view.findViewById(R.id.detail_content);
         image = view.findViewById(R.id.detail_image);
         return view;
     }
@@ -45,7 +45,7 @@ public class ArticleDetailFragment extends Fragment {
             @Override
             public void onChanged(Article article) {
                 title.setText(article.getTitle());
-                description.setText(article.getDescription());
+                content.setText(article.getContent());
                 Picasso.get().load(article.getImage()).resize(1000, 400) // resizes the image to these dimensions (in pixel)
                         .centerCrop().into(image);
             }
