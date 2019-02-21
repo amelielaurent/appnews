@@ -25,6 +25,9 @@ public class Article {
     @ColumnInfo(name = "article_content")
     private String content;
 
+    @ColumnInfo(name = "article_author")
+    private String author;
+
     @ColumnInfo(name = "article_like")
     private int like;
 
@@ -89,6 +92,14 @@ public class Article {
         this.content = content;
     }
 
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
     @Override
     public String toString() {
         return "Article{" +
@@ -96,6 +107,7 @@ public class Article {
                 ", title='" + title + '\'' +
                 ", description='" + description + '\'' +
                 ", content='" + content + '\'' +
+                ", author='" + author + '\'' +
                 '}';
     }
 }
