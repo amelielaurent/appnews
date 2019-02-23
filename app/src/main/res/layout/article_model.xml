@@ -6,12 +6,12 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     card_view:cardCornerRadius="4dp"
-    android:layout_margin="10dp">
+    android:layout_margin="@dimen/padding_10">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="20dp"
+        android:paddingBottom="@dimen/padding_20"
         >
 
         <ImageView
@@ -20,7 +20,8 @@
             android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="parent"
             android:src="@mipmap/ic_launcher"
-            android:adjustViewBounds="true"/>
+            android:adjustViewBounds="true"
+            android:contentDescription="@null"/>
 
         <TextView
             android:id="@+id/textTitre"
@@ -29,19 +30,19 @@
             android:textColor="@color/colorPrimaryDark"
             android:textStyle="bold"
             android:textSize="22sp"
-            android:layout_marginTop="10sp"
+            android:layout_marginTop="@dimen/padding_10"
             app:layout_constraintTop_toBottomOf="@id/image"
-            android:paddingEnd="20sp"
-            android:paddingStart="20sp"/>
+            android:paddingEnd="@dimen/padding_20"
+            android:paddingStart="@dimen/padding_20"/>
 
         <TextView
             android:id="@+id/textDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/textTitre"
-            android:layout_marginTop="10sp"
-            android:paddingEnd="20sp"
-            android:paddingStart="20sp"/>
+            android:layout_marginTop="@dimen/padding_10"
+            android:paddingEnd="@dimen/padding_20"
+            android:paddingStart="@dimen/padding_20"/>
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/buttonLike"
@@ -51,8 +52,8 @@
             app:layout_constraintTop_toBottomOf="@id/textDescription"
             app:layout_constraintEnd_toStartOf="@id/buttonShare"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_margin="10dp"
-            android:padding="10sp"
+            android:layout_margin="@dimen/padding_10"
+            android:padding="@dimen/padding_10"
             style="@style/ButtonPrimary"
             />
 
@@ -64,8 +65,8 @@
             app:layout_constraintTop_toBottomOf="@id/textDescription"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_margin="10dp"
-            android:padding="10sp"
+            android:layout_margin="@dimen/padding_10"
+            android:padding="@dimen/padding_10"
             style="@style/ButtonPrimary"
             />
 

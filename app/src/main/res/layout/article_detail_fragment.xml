@@ -6,14 +6,14 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     card_view:cardCornerRadius="4dp"
-    android:layout_margin="10dp">
+    android:layout_margin="@dimen/padding_10">
 
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/colorWhite"
-    android:layout_marginBottom="20dp"
+    android:layout_marginBottom="@dimen/padding_20"
     >
 
     <ImageView
@@ -21,7 +21,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
-        android:adjustViewBounds="true"/>
+        android:adjustViewBounds="true"
+        android:contentDescription="@null"
+        />
 
     <TextView
         android:id="@+id/detail_title"
@@ -71,6 +73,8 @@
         android:layout_width="match_parent"
         app:layout_constraintTop_toBottomOf="@id/detail_author"
         android:layout_height="1dp"
+        android:layout_marginStart="@dimen/padding_20"
+        android:layout_marginEnd="@dimen/padding_20"
         android:background="@color/colorSeparate" />
 
     <TextView
