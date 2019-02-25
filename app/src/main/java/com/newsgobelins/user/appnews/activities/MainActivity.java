@@ -5,6 +5,7 @@ import android.os.Bundle;
 import com.newsgobelins.user.appnews.R;
 import com.newsgobelins.user.appnews.database.DatabaseHelper;
 import com.newsgobelins.user.appnews.fragments.ArticleListFragment;
+import com.newsgobelins.user.appnews.network.NetworkHelper;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         DatabaseHelper.init(this);
+        NetworkHelper.init(this);
 
         showArticleList();
     }
