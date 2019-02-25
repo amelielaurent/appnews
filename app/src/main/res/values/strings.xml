@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Newspepper</string>
     <string name="author">Écrit par : </string>
+    <string name="Contact">Contact</string>
 </resources>

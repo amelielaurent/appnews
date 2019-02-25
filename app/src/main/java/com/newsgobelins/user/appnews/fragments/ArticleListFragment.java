@@ -90,10 +90,8 @@ public class ArticleListFragment extends Fragment implements ArticleListener {
         ArticleDetailFragment fragment = new ArticleDetailFragment();
 
         FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-
         transaction.replace(R.id.fragment_container, fragment);
         transaction.addToBackStack(null);
-
         transaction.commit();
     }
 
