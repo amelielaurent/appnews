@@ -1,3 +1,6 @@
+.idea/caches/gradle_models.ser
+.idea/misc.xml
+
 *.iml
 .gradle
 /local.properties
