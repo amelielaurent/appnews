@@ -8,83 +8,83 @@
     card_view:cardCornerRadius="4dp"
     android:layout_margin="@dimen/padding_10">
 
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/colorWhite"
-    android:layout_marginBottom="@dimen/padding_20"
-    >
-
-    <ImageView
-        android:id="@+id/detail_image"
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        android:adjustViewBounds="true"
-        android:contentDescription="@null"
-        />
-
-    <TextView
-        android:id="@+id/detail_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/detail_image"
-        android:paddingStart="@dimen/padding_20"
-        android:paddingEnd="@dimen/padding_20"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="@color/colorPrimaryDark"
-        android:paddingTop="@dimen/padding_20"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@color/colorWhite"
+        android:layout_marginBottom="@dimen/padding_20"
         >
-    </TextView>
 
-    <TextView
-        android:id="@+id/detail_text_author"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingStart="@dimen/padding_20"
-        android:paddingEnd="5dp"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        android:text="@string/author"
-        app:layout_constraintStart_toStartOf="@id/detail_title"
-        app:layout_constraintTop_toBottomOf="@id/detail_title"
-        android:textColor="@color/colorSecondary"
-        android:paddingTop="@dimen/padding_10"
-        android:paddingBottom="@dimen/padding_10"/>
+        <ImageView
+            android:id="@+id/detail_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:adjustViewBounds="true"
+            android:contentDescription="@null"
+            />
 
-    <TextView
-        android:id="@+id/detail_author"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@id/detail_text_author"
-        app:layout_constraintTop_toBottomOf="@id/detail_title"
-        android:textColor="@color/colorSecondary"
-        android:paddingTop="@dimen/padding_10"
-        android:paddingBottom="@dimen/padding_10"/>
+        <TextView
+            android:id="@+id/detail_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/detail_image"
+            android:paddingStart="@dimen/padding_20"
+            android:paddingEnd="@dimen/padding_20"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:paddingTop="@dimen/padding_20"
+            >
+        </TextView>
 
-    <View
-        android:id="@+id/detail_separate"
-        app:layout_constraintStart_toStartOf="@id/detail_text_author"
-        app:layout_constraintEnd_toEndOf="@id/detail_text_author"
-        android:layout_width="match_parent"
-        app:layout_constraintTop_toBottomOf="@id/detail_author"
-        android:layout_height="1dp"
-        android:layout_marginStart="@dimen/padding_20"
-        android:layout_marginEnd="@dimen/padding_20"
-        android:background="@color/colorSeparate" />
+        <TextView
+            android:id="@+id/detail_text_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/padding_20"
+            android:paddingEnd="5dp"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:text="@string/author"
+            app:layout_constraintStart_toStartOf="@id/detail_title"
+            app:layout_constraintTop_toBottomOf="@id/detail_title"
+            android:textColor="@color/colorSecondary"
+            android:paddingTop="@dimen/padding_10"
+            android:paddingBottom="@dimen/padding_10"/>
 
-    <TextView
-        android:id="@+id/detail_content"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/detail_separate"
-        android:paddingStart="@dimen/padding_20"
-        android:paddingTop="@dimen/padding_10"
-        android:paddingEnd="@dimen/padding_20"/>
+        <TextView
+            android:id="@+id/detail_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/detail_text_author"
+            app:layout_constraintTop_toBottomOf="@id/detail_title"
+            android:textColor="@color/colorSecondary"
+            android:paddingTop="@dimen/padding_10"
+            android:paddingBottom="@dimen/padding_10"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <View
+            android:id="@+id/detail_separate"
+            app:layout_constraintStart_toStartOf="@id/detail_text_author"
+            app:layout_constraintEnd_toEndOf="@id/detail_text_author"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/detail_author"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/padding_20"
+            android:layout_marginEnd="@dimen/padding_20"
+            android:background="@color/colorSeparate" />
+
+        <TextView
+            android:id="@+id/detail_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/detail_separate"
+            android:paddingStart="@dimen/padding_20"
+            android:paddingTop="@dimen/padding_10"
+            android:paddingEnd="@dimen/padding_20"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
