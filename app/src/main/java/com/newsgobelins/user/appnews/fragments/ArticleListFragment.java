@@ -1,6 +1,7 @@
 package com.newsgobelins.user.appnews.fragments;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
@@ -83,7 +84,6 @@ public class ArticleListFragment extends Fragment implements ArticleListener {
     @Override
     public void onLike(Article article) {
         //Ici il faut ajouter le like dans la bdd et changer le bouton
-
     }
 
     private void showDetail() {
@@ -94,5 +94,4 @@ public class ArticleListFragment extends Fragment implements ArticleListener {
         transaction.addToBackStack(null);
         transaction.commit();
     }
-
 }

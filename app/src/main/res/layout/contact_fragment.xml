@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view_detail"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="4dp"
+    card_view:cardBackgroundColor="@color/colorWhite"
+    android:layout_margin="@dimen/padding_10">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        android:layout_marginBottom="@dimen/padding_20"
+        >
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/contact_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingStart="@dimen/padding_20"
@@ -13,6 +25,7 @@
         android:textStyle="bold"
         android:textColor="@color/colorPrimaryDark"
         android:paddingTop="@dimen/padding_20"
+        card_view:layout_constraintStart_toStartOf="parent"
         android:text="@string/Contact"/>
 
 
@@ -22,6 +35,83 @@
         android:layout_height="1dp"
         android:layout_marginStart="@dimen/padding_20"
         android:layout_marginEnd="@dimen/padding_20"
-        android:background="@color/colorSeparate" />
+        android:background="@color/colorSeparate"
+        card_view:layout_constraintTop_toBottomOf="@id/contact_title"/>
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/contact_text_telephone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/padding_20"
+        android:paddingEnd="@dimen/padding_10"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorSecondary"
+        android:paddingTop="@dimen/padding_20"
+        android:text="@string/telephone"
+        card_view:layout_constraintStart_toStartOf="@id/contact_title"
+        card_view:layout_constraintTop_toBottomOf="@id/detail_separate"/>
+
+    <TextView
+        android:id="@+id/contact_telephone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@color/colorSecondary"
+        android:text="@string/number"
+        android:paddingTop="22dp"
+        card_view:layout_constraintStart_toEndOf="@id/contact_text_telephone"
+        card_view:layout_constraintTop_toBottomOf="@id/detail_separate" />
+
+        <TextView
+            android:id="@+id/contact_text_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/padding_20"
+            android:paddingEnd="@dimen/padding_10"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorSecondary"
+            android:paddingTop="@dimen/padding_10"
+            android:text="@string/adresse"
+            card_view:layout_constraintStart_toStartOf="@id/contact_title"
+            card_view:layout_constraintTop_toBottomOf="@id/contact_text_telephone"/>
+
+        <TextView
+            android:id="@+id/contact_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/colorSecondary"
+            android:text="@string/adresse_lieu"
+            android:paddingTop="12dp"
+            card_view:layout_constraintStart_toEndOf="@id/contact_text_address"
+            card_view:layout_constraintTop_toBottomOf="@id/contact_text_telephone" />
+
+        <TextView
+            android:id="@+id/contact_text_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/padding_20"
+            android:paddingEnd="@dimen/padding_10"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorSecondary"
+            android:paddingTop="@dimen/padding_10"
+            android:text="@string/email"
+            card_view:layout_constraintStart_toStartOf="@id/contact_title"
+            card_view:layout_constraintTop_toBottomOf="@id/contact_text_address"/>
+
+        <TextView
+            android:id="@+id/contact_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/colorSecondary"
+            android:text="@string/adresse_email"
+            android:paddingTop="12dp"
+            card_view:layout_constraintStart_toEndOf="@id/contact_text_email"
+            card_view:layout_constraintTop_toBottomOf="@id/contact_text_address" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
