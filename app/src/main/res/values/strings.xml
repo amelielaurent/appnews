@@ -2,4 +2,6 @@
     <string name="app_name">Newspepper</string>
     <string name="author">Écrit par : </string>
     <string name="Contact">Contact</string>
+    <string name="telephone">Téléphone :</string>
+    <string name="number">04 76 54 21 25</string>
 </resources>
