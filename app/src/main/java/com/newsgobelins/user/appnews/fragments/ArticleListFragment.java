@@ -67,7 +67,10 @@ public class ArticleListFragment extends Fragment implements ArticleListener {
 
     @Override
     public void onShare(Article article) {
+        // Notif lorsqu'on clique sur partager
         Toast.makeText(getContext(), "PARTAGER", Toast.LENGTH_SHORT).show();
+
+        // Prépare l'Intent pour lancer le menu de partage
         Intent sendIntent = new Intent();
         sendIntent.setAction(Intent.ACTION_SEND);
         sendIntent.putExtra(Intent.EXTRA_TEXT, "Cet article " + article.getTitle() + " est trop bien");
@@ -77,6 +80,8 @@ public class ArticleListFragment extends Fragment implements ArticleListener {
 
     @Override
     public void onSelect(Article article) {
+        // Ouvrir les details d'un article lorsqu'on clique dessus dans la liste
+
         model.setSelected(article);
         showDetail();
     }
