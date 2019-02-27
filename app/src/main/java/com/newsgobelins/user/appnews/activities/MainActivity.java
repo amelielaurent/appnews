@@ -30,12 +30,20 @@ public class MainActivity extends AppCompatActivity {
         ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
 
+
         PageAdapter adapter = new PageAdapter(getSupportFragmentManager());
        adapter.addFragment(new ArticleListFragment(), "Actualités");
         adapter.addFragment(new ContactFragment(), "Contact");
 
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
+
+        int[] tabIcons = {
+                R.drawable.ic_home,
+                R.drawable.ic_help,
+        };
+        tabLayout.getTabAt(0).setIcon(tabIcons[0]);
+        tabLayout.getTabAt(1).setIcon(tabIcons[1]);
     }
 
     /*private void showArticleList() {
