@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">Newspepper</string>
     <string name="author">Écrit par : </string>
-    <string name="Contact">Contact</string>
+    <string name="Contact">Nous contacter</string>
     <string name="telephone">Téléphone :</string>
-    <string name="number">04 76 54 21 25</string>
+    <string name="number"><u>04 76 54 21 25</u></string>
+    <string name="adresse">Adresse : </string>
+    <string name="adresse_lieu"><u>3 rue Thiers - 38000 Grenoble</u></string>
 </resources>

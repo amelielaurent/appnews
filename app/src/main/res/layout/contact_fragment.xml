@@ -61,7 +61,32 @@
         android:text="@string/number"
         android:paddingTop="22dp"
         card_view:layout_constraintStart_toEndOf="@id/contact_text_telephone"
-        card_view:layout_constraintTop_toBottomOf="@id/detail_separate"/>
+        card_view:layout_constraintTop_toBottomOf="@id/detail_separate" />
+
+        <TextView
+            android:id="@+id/contact_text_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/padding_20"
+            android:paddingEnd="@dimen/padding_10"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorSecondary"
+            android:paddingTop="@dimen/padding_10"
+            android:text="@string/adresse"
+            card_view:layout_constraintStart_toStartOf="@id/contact_title"
+            card_view:layout_constraintTop_toBottomOf="@id/contact_text_telephone"/>
+
+        <TextView
+            android:id="@+id/contact_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/colorSecondary"
+            android:text="@string/adresse_lieu"
+            android:paddingTop="12dp"
+            card_view:layout_constraintStart_toEndOf="@id/contact_text_address"
+            card_view:layout_constraintTop_toBottomOf="@id/contact_text_telephone" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
