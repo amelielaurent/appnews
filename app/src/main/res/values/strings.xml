@@ -6,4 +6,6 @@
     <string name="number"><u>04 76 54 21 25</u></string>
     <string name="adresse">Adresse : </string>
     <string name="adresse_lieu"><u>3 rue Thiers - 38000 Grenoble</u></string>
+    <string name="email">Email :</string>
+    <string name="adresse_email"><u>newspepper@gmail.com</u></string>
 </resources>

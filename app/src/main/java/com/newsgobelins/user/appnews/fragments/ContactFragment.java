@@ -18,12 +18,14 @@ public class ContactFragment extends Fragment {
     private View view;
     private TextView mbuttonCall;
     private TextView mbuttonAddress;
+    private TextView mbuttonEmail;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.contact_fragment, container, false);
         mbuttonCall = view.findViewById(R.id.contact_telephone);
         mbuttonAddress = view.findViewById(R.id.contact_address);
+        mbuttonEmail = view.findViewById(R.id.contact_email);
         return view;
     }
 
@@ -35,9 +37,9 @@ public class ContactFragment extends Fragment {
         mbuttonCall.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Toast.makeText(getContext(), "APPELER", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(Intent.ACTION_DIAL);
-                intent.setData(Uri.parse("tel:0476542125"));
-                startActivity(intent);
+                Intent callIntent = new Intent(Intent.ACTION_DIAL);
+                callIntent.setData(Uri.parse("tel:0476542125"));
+                startActivity(callIntent);
             }
         });
 
@@ -49,6 +51,16 @@ public class ContactFragment extends Fragment {
                 Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
                 mapIntent.setPackage("com.google.android.apps.maps");
                 startActivity(mapIntent);
+            }
+        });
+
+        //Fonction permettant d'envoyer un email
+        mbuttonEmail.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Toast.makeText(getContext(), "ENVOYER UN MAIL", Toast.LENGTH_SHORT).show();
+                Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
+                emailIntent.setData(Uri.parse("mailto:newspepper@gmail.com"));
+                startActivity(emailIntent);
             }
         });
     }
