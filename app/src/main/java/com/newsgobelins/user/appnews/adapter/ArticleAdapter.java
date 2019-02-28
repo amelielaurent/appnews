@@ -66,9 +66,12 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.MyViewHo
 
         private void bindItem(final Article article) {
             view.setOnClickListener(new View.OnClickListener(){
+                // écout le  clic sur un article dans la liste
+
                 @Override
                 public void onClick(View v) {
                     listener.onSelect(article);
+
                 }
             });
 

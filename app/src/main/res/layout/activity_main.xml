@@ -7,6 +7,7 @@
     tools:context=".activities.MainActivity">
 
 
+
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tab_layout"
         android:layout_width="match_parent"
@@ -18,11 +19,14 @@
         android:elevation="6dp"
         />
 
+
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent">
+
+
 
         <FrameLayout
             android:id="@+id/fragment_container"
@@ -32,5 +36,7 @@
         </FrameLayout>
 
     </androidx.viewpager.widget.ViewPager>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

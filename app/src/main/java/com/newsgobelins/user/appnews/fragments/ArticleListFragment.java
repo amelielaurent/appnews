@@ -94,9 +94,17 @@ public class ArticleListFragment extends Fragment implements ArticleListener {
     private void showDetail() {
         ArticleDetailFragment fragment = new ArticleDetailFragment();
 
-        FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.fragment_container, fragment);
-        transaction.addToBackStack(null);
-        transaction.commit();
+        System.out.println("click sur un article");
+        System.out.println(fragment);
+
+        if(getActivity() != null){
+            FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.fragment_container, fragment);
+            transaction.addToBackStack(null);
+            transaction.commit();
+        }else{
+            System.out.println("fragment transaction error");
+        }
+
     }
 }

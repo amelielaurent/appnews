@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         DatabaseHelper.init(this);
         NetworkHelper.init(this);
 
-        //showArticleList();
+        showArticleList();
 
         //Pour tablayout
         ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         PageAdapter adapter = new PageAdapter(getSupportFragmentManager());
-       adapter.addFragment(new ArticleListFragment(), "Actualités");
+        adapter.addFragment(new ArticleListFragment(), "Actualités");
         adapter.addFragment(new ContactFragment(), "Contact");
 
         viewPager.setAdapter(adapter);
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.getTabAt(1).setIcon(tabIcons[1]);
     }
 
-    /*private void showArticleList() {
+    private void showArticleList() {
         ArticleListFragment fragment = new ArticleListFragment();
 
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
@@ -55,5 +55,5 @@ public class MainActivity extends AppCompatActivity {
         transaction.addToBackStack(null);
 
         transaction.commit();
-    }*/
+    }
 }

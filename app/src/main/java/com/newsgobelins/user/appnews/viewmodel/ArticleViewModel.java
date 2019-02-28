@@ -128,6 +128,8 @@ public class ArticleViewModel extends ViewModel {
 
     public void setSelected(Article article) {
         selected.setValue(article);
+
+
     }
 
     public LiveData<Article> getSelected() {
