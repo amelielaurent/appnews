@@ -18,7 +18,7 @@ Nous avons conçu Newspepper, une application de presse numérique. Celle-ci aff
 
 ### Installation du projet : 
 Cloner le projet : 
-  `git clone https://github.com/amelielaurent/appnews.git`
+    git clone https://github.com/amelielaurent/appnews.git
 
 ### Lancer l’application : 
 Clic sur la petite flèche verte
