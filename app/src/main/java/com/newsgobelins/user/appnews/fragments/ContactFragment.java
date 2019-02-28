@@ -13,7 +13,7 @@ import com.newsgobelins.user.appnews.R;
 
 import androidx.fragment.app.Fragment;
 
-public class ContactFragment extends Fragment {
+public class  ContactFragment extends Fragment {
 
     private View view;
     private TextView mbuttonCall;
