@@ -4,9 +4,9 @@ Nous avons conçu Newspepper, une application de presse numérique. Celle-ci aff
 
 ## Qui a participé au projet ?
 
-Mickaël DEBALME
-Amélie LAURENT
-Robin SIMONKLEIN
+- Mickaël DEBALME
+- Amélie LAURENT
+- Robin SIMONKLEIN
 
 ## Ce qu’on aurait aimé faire :
 
@@ -25,3 +25,6 @@ Clic sur la petite flèche verte
 
 ### Emulateur : 
 Pixel 2 XL
+
+## Vidéo du projet :
+https://youtu.be/0w8jTHHERvc 
