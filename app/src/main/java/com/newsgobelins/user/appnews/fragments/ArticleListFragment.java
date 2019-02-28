@@ -17,6 +17,7 @@ import com.newsgobelins.user.appnews.viewmodel.ArticleViewModel;
 
 import java.util.List;
 
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.Observer;
@@ -24,16 +25,19 @@ import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+import androidx.viewpager.widget.ViewPager;
 
 public class ArticleListFragment extends Fragment implements ArticleListener {
     private RecyclerView recyclerView;
     private ArticleViewModel model;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //Créer ou récuperer l'instance du viewmodel pour ce fragment
         model = ViewModelProviders.of(getActivity()).get(ArticleViewModel.class);
+
     }
 
     @Override
@@ -56,11 +60,22 @@ public class ArticleListFragment extends Fragment implements ArticleListener {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+
+
+
+
         model.getArticles().observe(getViewLifecycleOwner(), new Observer<List<Article>>() {
+
+
             @Override
             public void onChanged(List<Article> articles) {
                 ArticleAdapter adapter = new ArticleAdapter(articles, ArticleListFragment.this);
                 recyclerView.setAdapter(adapter);
+
+
+                // On cache le loader une fois que le contenu est chargé
+                ConstraintLayout loaderWrap = (ConstraintLayout) getActivity().findViewById(R.id.loader_wrap);
+                loaderWrap.setVisibility(View.INVISIBLE);
             }
         });
     }
