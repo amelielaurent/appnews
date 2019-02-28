@@ -61,10 +61,6 @@ public class ArticleListFragment extends Fragment implements ArticleListener {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-
-
-
-
         model.getArticles().observe(getViewLifecycleOwner(), new Observer<List<Article>>() {
 
 
@@ -72,7 +68,6 @@ public class ArticleListFragment extends Fragment implements ArticleListener {
             public void onChanged(List<Article> articles) {
                 ArticleAdapter adapter = new ArticleAdapter(articles, ArticleListFragment.this);
                 recyclerView.setAdapter(adapter);
-
 
                 // On cache le loader une fois que le contenu est chargé
                 ConstraintLayout loaderWrap = (ConstraintLayout) getActivity().findViewById(R.id.loader_wrap);
@@ -97,7 +92,6 @@ public class ArticleListFragment extends Fragment implements ArticleListener {
     @Override
     public void onSelect(Article article) {
         // Ouvrir les details d'un article lorsqu'on clique dessus dans la liste
-
         model.setSelected(article);
         showDetail();
     }
@@ -109,9 +103,6 @@ public class ArticleListFragment extends Fragment implements ArticleListener {
 
     private void showDetail() {
         ArticleDetailFragment detailsFragment = new ArticleDetailFragment();
-
-
-
         System.out.println("click sur un article");
         System.out.println(detailsFragment);
 
@@ -126,6 +117,5 @@ public class ArticleListFragment extends Fragment implements ArticleListener {
         }else{
             System.out.println("fragment transaction error");
         }
-
     }
 }

@@ -32,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
         final ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
 
-
         PageAdapter adapter = new PageAdapter(getSupportFragmentManager());
         adapter.addFragment(new ArticleListFragment(), "Actualités");
         adapter.addFragment(new ContactFragment(), "Contact");
@@ -53,7 +52,6 @@ public class MainActivity extends AppCompatActivity {
                 FrameLayout details_fragment;
                 details_fragment = (FrameLayout) findViewById(R.id.details_container);
                 details_fragment.setVisibility(View.INVISIBLE);
-
                 System.out.println("click tab");
             }
 
@@ -71,18 +69,13 @@ public class MainActivity extends AppCompatActivity {
                 details_fragment.setVisibility(View.INVISIBLE);
             }
         });
-
-
     }
 
     private void showArticleList() {
         ArticleListFragment fragment = new ArticleListFragment();
-
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-
         transaction.replace(R.id.fragment_container, fragment);
         transaction.addToBackStack(null);
-
         transaction.commit();
     }
 }

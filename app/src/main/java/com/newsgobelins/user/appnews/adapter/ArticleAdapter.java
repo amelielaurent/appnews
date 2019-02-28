@@ -90,7 +90,6 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.MyViewHo
                 }
             });
 
-
             mTitle.setText(article.getTitle());
             mDescription.setText(article.getDescription());
             Picasso.get().load(article.getImage()).resize(1000, 400) // resizes the image to these dimensions (in pixel)

@@ -21,7 +21,7 @@
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:src="@drawable/ic_loading"
-            app:layout_constraintBottom_toBottomOf="@id/loader_text"
+            app:layout_constraintBottom_toBottomOf="@id/loader_wrap"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:alpha="0.6"
@@ -39,7 +39,7 @@
             android:textColor="@color/colorPrimaryDark"
             android:textStyle="bold"
             android:textSize="22sp"
-            android:text="Chargement..."/>
+            android:text="@string/chargement"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -27,4 +27,4 @@ Clic sur la petite flèche verte
 Pixel 2 XL
 
 ## Vidéo du projet :
-https://youtu.be/0w8jTHHERvc 
+https://youtu.be/0w8jTHHERvc

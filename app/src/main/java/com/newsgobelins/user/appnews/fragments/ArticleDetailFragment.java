@@ -18,7 +18,6 @@ import androidx.lifecycle.ViewModelProviders;
 
 public class ArticleDetailFragment extends Fragment {
     private ArticleViewModel viewModel;
-    private View view;
     private TextView title;
     private TextView content;
     private TextView author;
@@ -32,7 +31,7 @@ public class ArticleDetailFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.article_detail_fragment, container, false);
+        View view = inflater.inflate(R.layout.article_detail_fragment, container, false);
         title = view.findViewById(R.id.detail_title);
         author = view.findViewById(R.id.detail_author);
         content = view.findViewById(R.id.detail_content);
