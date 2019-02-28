@@ -7,6 +7,7 @@ import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import com.newsgobelins.user.appnews.R;
@@ -107,16 +108,21 @@ public class ArticleListFragment extends Fragment implements ArticleListener {
     }
 
     private void showDetail() {
-        ArticleDetailFragment fragment = new ArticleDetailFragment();
+        ArticleDetailFragment detailsFragment = new ArticleDetailFragment();
+
+
 
         System.out.println("click sur un article");
-        System.out.println(fragment);
+        System.out.println(detailsFragment);
 
         if(getActivity() != null){
             FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-            transaction.replace(R.id.fragment_container, fragment);
+            transaction.replace(R.id.details_container, detailsFragment);
             transaction.addToBackStack(null);
             transaction.commit();
+
+            FrameLayout details_fragment = (FrameLayout) getActivity().findViewById(R.id.details_container);
+            details_fragment.setVisibility(View.VISIBLE);
         }else{
             System.out.println("fragment transaction error");
         }

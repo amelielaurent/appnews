@@ -1,6 +1,8 @@
 package com.newsgobelins.user.appnews.activities;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.FrameLayout;
 
 import com.google.android.material.tabs.TabLayout;
 import com.newsgobelins.user.appnews.R;
@@ -27,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         showArticleList();
 
         //Pour tablayout
-        ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
+        final ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
 
 
@@ -44,6 +46,33 @@ public class MainActivity extends AppCompatActivity {
         };
         tabLayout.getTabAt(0).setIcon(tabIcons[0]);
         tabLayout.getTabAt(1).setIcon(tabIcons[1]);
+
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                FrameLayout details_fragment;
+                details_fragment = (FrameLayout) findViewById(R.id.details_container);
+                details_fragment.setVisibility(View.INVISIBLE);
+
+                System.out.println("click tab");
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+                FrameLayout details_fragment;
+                details_fragment = (FrameLayout) findViewById(R.id.details_container);
+                details_fragment.setVisibility(View.INVISIBLE);
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+                FrameLayout details_fragment;
+                details_fragment = (FrameLayout) findViewById(R.id.details_container);
+                details_fragment.setVisibility(View.INVISIBLE);
+            }
+        });
+
+
     }
 
     private void showArticleList() {

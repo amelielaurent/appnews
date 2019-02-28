@@ -20,6 +20,7 @@
         />
 
 
+
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/pager"
         android:layout_width="match_parent"
@@ -36,6 +37,15 @@
         </FrameLayout>
 
     </androidx.viewpager.widget.ViewPager>
+    <FrameLayout
+        android:id="@+id/details_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="invisible"
+        android:background="@color/colorBackground">
+    </FrameLayout>
+
 
 
 
