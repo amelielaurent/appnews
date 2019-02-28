@@ -11,9 +11,7 @@ import bolts.Task;
 public class DatabaseHelper {
 
     private static NewsDatabase database;
-
     public static void init(final Context context) {
-
         Task.callInBackground(new Callable<Void>()
 
         {
@@ -35,5 +33,4 @@ public class DatabaseHelper {
     public static NewsDatabase getDatabase() {
         return database;
     }
-
 }

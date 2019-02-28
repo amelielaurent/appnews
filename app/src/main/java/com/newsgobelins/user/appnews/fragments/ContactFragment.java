@@ -15,14 +15,13 @@ import androidx.fragment.app.Fragment;
 
 public class  ContactFragment extends Fragment {
 
-    private View view;
     private TextView mbuttonCall;
     private TextView mbuttonAddress;
     private TextView mbuttonEmail;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.contact_fragment, container, false);
+        View view = inflater.inflate(R.layout.contact_fragment, container, false);
         mbuttonCall = view.findViewById(R.id.contact_telephone);
         mbuttonAddress = view.findViewById(R.id.contact_address);
         mbuttonEmail = view.findViewById(R.id.contact_email);

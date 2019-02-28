@@ -38,7 +38,6 @@ public class ArticleListFragment extends Fragment implements ArticleListener {
         super.onCreate(savedInstanceState);
         //Créer ou récuperer l'instance du viewmodel pour ce fragment
         model = ViewModelProviders.of(getActivity()).get(ArticleViewModel.class);
-
     }
 
     @Override
